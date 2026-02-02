@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malkai IVF Center - Your Journey to Parenthood Begins Here</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#00552B',
+                        secondary: '#004422',
+                        accent: '#FCC30D'
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-in',
+                        'fade-in-up': 'fadeInUp 0.6s ease-out',
+                        'fade-in-down': 'fadeInDown 0.6s ease-out',
+                        'slide-in-left': 'slideInLeft 0.6s ease-out',
+                        'slide-in-right': 'slideInRight 0.6s ease-out',
+                        'scale-in': 'scaleIn 0.5s ease-out',
+                        'bounce-slow': 'bounce 2s infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        fadeInDown: {
+                            '0%': { opacity: '0', transform: 'translateY(-20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        slideInLeft: {
+                            '0%': { opacity: '0', transform: 'translateX(-50px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' },
+                        },
+                        slideInRight: {
+                            '0%': { opacity: '0', transform: 'translateX(50px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' },
+                        },
+                        scaleIn: {
+                            '0%': { opacity: '0', transform: 'scale(0.9)' },
+                            '100%': { opacity: '1', transform: 'scale(1)' },
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom hover effects */
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        /* Gradient animation */
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .animate-gradient {
+            background-size: 200% 200%;
+            animation: gradient 8s ease infinite;
+        }
+
+        /* Fade in on scroll */
+        .fade-in-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Owl Carousel Custom Styles */
+        .testimonials-carousel .owl-nav {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .testimonials-carousel .owl-nav button {
+            background: #0d9488 !important;
+            color: white !important;
+            width: 50px;
+            height: 50px;
+            border-radius: 50% !important;
+            margin: 0 10px;
+            font-size: 20px;
+            transition: all 0.3s ease;
+        }
+        .testimonials-carousel .owl-nav button:hover {
+            background: #14b8a6 !important;
+            transform: scale(1.1);
+        }
+        .testimonials-carousel .owl-dots {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .testimonials-carousel .owl-dot {
+            display: inline-block;
+            margin: 0 5px;
+        }
+        .testimonials-carousel .owl-dot span {
+            width: 12px;
+            height: 12px;
+            background: #d1d5db;
+            display: block;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        .testimonials-carousel .owl-dot.active span {
+            background: #0d9488;
+            width: 30px;
+            border-radius: 10px;
+        }
+        .testimonials-carousel .owl-item {
+            display: flex;
+            align-items: stretch;
+        }
+        .testimonials-carousel .owl-item > div {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 overflow-x-hidden">
+
+    <!-- Sticky Navbar -->
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center">
+                    <img src="image/logo.png" alt="Malka Fertility & IVF Center" class="h-12 md:h-14">
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-primary font-semibold hover:text-secondary transition">Home</a>
+                    <a href="about.html" class="text-gray-700 hover:text-primary transition">About Us</a>
+                    <a href="services.html" class="text-gray-700 hover:text-primary transition">Services</a>
+                    <a href="gallery.html" class="text-gray-700 hover:text-primary transition">Gallery</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-primary transition">Contact</a>
+                    <a href="book-appointment.html" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition shadow-md hover:shadow-lg">Book Appointment</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-primary" onclick="toggleMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 space-y-3">
+                <a href="index.html" class="block text-primary font-semibold hover:text-secondary transition">Home</a>
+                <a href="about.html" class="block text-gray-700 hover:text-primary transition">About Us</a>
+                <a href="services.html" class="block text-gray-700 hover:text-primary transition">Services</a>
+                <a href="gallery.html" class="block text-gray-700 hover:text-primary transition">Gallery</a>
+                <a href="contact.html" class="block text-gray-700 hover:text-primary transition">Contact</a>
+                <a href="book-appointment.html" class="block bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition text-center">Book Appointment</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 md:pt-32 pb-16 bg-gradient-to-br from-teal-50 to-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Hero Content -->
+                <div class="space-y-6" data-aos="fade-right" data-aos-duration="1000">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                        Your Journey to <span class="text-primary">Parenthood</span> Starts Here
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-600">
+                        Advanced fertility treatments with compassionate care. We combine cutting-edge technology with personalized attention to help you achieve your dream of starting a family.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="book-appointment.html" class="bg-primary text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-secondary transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 text-center">
+                            <i class="fas fa-calendar-check mr-2"></i>Schedule Consultation
+                        </a>
+                        <a href="services.html" class="bg-white text-primary border-2 border-primary px-8 py-4 rounded-full text-lg font-semibold hover:bg-primary hover:text-white transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105 text-center">
+                            <i class="fas fa-stethoscope mr-2"></i>Explore Services
+                        </a>
+                    </div>
+                    <div class="flex items-center space-x-8 pt-4">
+                        <div data-aos="zoom-in" data-aos-delay="200">
+                            <p class="text-3xl font-bold text-primary"><i class="fas fa-award mr-2"></i>15+</p>
+                            <p class="text-gray-600">Years Experience</p>
+                        </div>
+                        <div data-aos="zoom-in" data-aos-delay="400">
+                            <p class="text-3xl font-bold text-primary"><i class="fas fa-heart-pulse mr-2"></i>5000+</p>
+                            <p class="text-gray-600">Success Stories</p>
+                        </div>
+                        <div data-aos="zoom-in" data-aos-delay="600">
+                            <p class="text-3xl font-bold text-primary"><i class="fas fa-thumbs-up mr-2"></i>98%</p>
+                            <p class="text-gray-600">Satisfaction Rate</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image -->
+                <div class="relative" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="bg-gradient-to-br from-primary to-secondary rounded-3xl p-8 shadow-2xl hover-lift">
+                        <div class="bg-white rounded-2xl p-8">
+                            <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=800" alt="Happy Family" class="w-full h-auto rounded-xl object-cover">
+                            <p class="text-gray-600 text-center mt-4 font-semibold">Happy Family Together</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Overview Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <div class="max-w-3xl mx-auto text-center mb-12" data-aos="fade-up" data-aos-duration="800">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Welcome to Malkai IVF Center
+                </h2>
+                <p class="text-lg text-gray-600">
+                   We are a leading fertility center dedicated to helping individuals and couples build the families they've always dreamed of.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Mission -->
+                <div class="bg-gradient-to-br from-teal-50 to-white p-8 rounded-2xl shadow-md hover-lift" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4 transition-transform duration-300 hover:rotate-12">
+                        <i class="fas fa-bullseye text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3"><i class="fas fa-flag-checkered text-accent mr-2"></i>Our Mission</h3>
+                    <p class="text-gray-600">
+                        To provide world-class fertility care with compassion, respect, and the latest medical advancements to help every patient achieve their dream of parenthood.
+                    </p>
+                </div>
+
+                <!-- Expertise -->
+                <div class="bg-gradient-to-br from-teal-50 to-white p-8 rounded-2xl shadow-md hover-lift" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4 transition-transform duration-300 hover:rotate-12">
+                        <i class="fas fa-user-md text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3"><i class="fas fa-users text-accent mr-2"></i>Expert Team</h3>
+                    <p class="text-gray-600">
+                        Our board-certified reproductive endocrinologists and embryologists bring decades of combined experience and stay at the forefront of fertility science.
+                    </p>
+                </div>
+
+                <!-- Technology -->
+                <div class="bg-gradient-to-br from-teal-50 to-white p-8 rounded-2xl shadow-md hover-lift" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4 transition-transform duration-300 hover:rotate-12">
+                        <i class="fas fa-microscope text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3"><i class="fas fa-flask text-accent mr-2"></i>Advanced Technology</h3>
+                    <p class="text-gray-600">
+                        State-of-the-art laboratory facilities with the latest IVF technology, genetic testing capabilities, and advanced embryo monitoring systems.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <div class="max-w-3xl mx-auto text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Our Fertility Services
+                </h2>
+                <p class="text-lg text-gray-600">
+                   Comprehensive fertility treatments tailored to your unique needs and circumstances.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- IVF -->
+                <div class="bg-white rounded-2xl p-6 shadow-md hover-lift" data-aos="flip-left" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-vial text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2"><i class="fas fa-flask text-accent mr-2"></i>In Vitro Fertilization (IVF)</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Advanced IVF protocols to maximize success rates with personalized treatment plans.
+                    </p>
+                    <a href="services.html" class="inline-flex items-center text-primary font-semibold hover:text-secondary transition text-sm">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- ICSI -->
+                <div class="bg-white rounded-2xl p-6 shadow-md hover-lift" data-aos="flip-left" data-aos-delay="150">
+                    <div class="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-syringe text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2"><i class="fas fa-microscope text-accent mr-2"></i>ICSI</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Intracytoplasmic Sperm Injection for direct sperm injection into the egg.
+                    </p>
+                    <a href="services.html" class="inline-flex items-center text-primary font-semibold hover:text-secondary transition text-sm">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- PGD -->
+                <div class="bg-white rounded-2xl p-6 shadow-md hover-lift" data-aos="flip-left" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-dna text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2"><i class="fas fa-dna text-accent mr-2"></i>PGD</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Preimplantation Genetic Diagnosis to screen embryos for genetic conditions.
+                    </p>
+                    <a href="services.html" class="inline-flex items-center text-primary font-semibold hover:text-secondary transition text-sm">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- FET -->
+                <div class="bg-white rounded-2xl p-6 shadow-md hover-lift" data-aos="flip-left" data-aos-delay="250">
+                    <div class="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-snowflake text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2"><i class="fas fa-snowflake text-accent mr-2"></i>Frozen Embryo Transfer (FET)</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Transfer of previously frozen embryos with optimal timing for implantation.
+                    </p>
+                    <a href="services.html" class="inline-flex items-center text-primary font-semibold hover:text-secondary transition text-sm">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- IUI -->
+                <div class="bg-white rounded-2xl p-6 shadow-md hover-lift" data-aos="flip-left" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-hand-holding-medical text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2"><i class="fas fa-notes-medical text-accent mr-2"></i>IUI</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Intrauterine Insemination - placing sperm directly into the uterus during ovulation.
+                    </p>
+                    <a href="services.html" class="inline-flex items-center text-primary font-semibold hover:text-secondary transition text-sm">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Laparoscopy -->
+                <div class="bg-white rounded-2xl p-6 shadow-md hover-lift" data-aos="flip-left" data-aos-delay="150">
+                    <div class="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-stethoscope text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2"><i class="fas fa-procedures text-accent mr-2"></i>Laparoscopy</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Minimally invasive surgical procedure for diagnosis and treatment of fertility issues.
+                    </p>
+                    <a href="services.html" class="inline-flex items-center text-primary font-semibold hover:text-secondary transition text-sm">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Ovulation Induction -->
+                <div class="bg-white rounded-2xl p-6 shadow-md hover-lift" data-aos="flip-left" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-pills text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2"><i class="fas fa-capsules text-accent mr-2"></i>Ovulation Induction</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Medication-based treatment to stimulate egg development and release.
+                    </p>
+                    <a href="services.html" class="inline-flex items-center text-primary font-semibold hover:text-secondary transition text-sm">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- PGT -->
+                <div class="bg-white rounded-2xl p-6 shadow-md hover-lift" data-aos="flip-left" data-aos-delay="250">
+                    <div class="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-microscope text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2"><i class="fas fa-search-plus text-accent mr-2"></i>PGT (Genetic Testing)</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Preimplantation genetic testing to screen embryos for chromosomal abnormalities.
+                    </p>
+                    <a href="services.html" class="inline-flex items-center text-primary font-semibold hover:text-secondary transition text-sm">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treatment Journey Timeline -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <div class="max-w-3xl mx-auto text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Your Treatment Journey
+                </h2>
+                <p class="text-lg text-gray-600">
+                    A step-by-step guide through your fertility treatment process with Malkai IVF Center.
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <!-- Step 1 -->
+                <div class="flex flex-col md:flex-row gap-6 mb-8" data-aos="fade-right" data-aos-delay="100">
+                    <div class="flex-shrink-0">
+                        <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold shadow-lg transition-transform duration-300 hover:scale-110">
+                            <i class="fas fa-user-doctor"></i>
+                        </div>
+                    </div>
+                    <div class="flex-grow">
+                        <div class="bg-gradient-to-br from-teal-50 to-white p-6 rounded-xl shadow-md border-l-4 border-primary transition-all duration-300 hover:shadow-xl hover:translate-x-2">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2"><i class="fas fa-comments text-accent mr-2"></i>Initial Consultation</h3>
+                            <p class="text-gray-600">
+                                Meet with our fertility specialist to discuss your medical history, undergo preliminary testing, and develop a personalized treatment plan tailored to your unique needs.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex flex-col md:flex-row gap-6 mb-8" data-aos="fade-right" data-aos-delay="200">
+                    <div class="flex-shrink-0">
+                        <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold shadow-lg transition-transform duration-300 hover:scale-110">
+                            <i class="fas fa-vial"></i>
+                        </div>
+                    </div>
+                    <div class="flex-grow">
+                        <div class="bg-gradient-to-br from-teal-50 to-white p-6 rounded-xl shadow-md border-l-4 border-primary transition-all duration-300 hover:shadow-xl hover:translate-x-2">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2"><i class="fas fa-flask text-accent mr-2"></i>Diagnostic Testing</h3>
+                            <p class="text-gray-600">
+                                Comprehensive fertility assessment including hormone analysis, ultrasound imaging, semen analysis, and any additional tests needed to identify the root cause of infertility.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="flex flex-col md:flex-row gap-6 mb-8" data-aos="fade-right" data-aos-delay="300">
+                    <div class="flex-shrink-0">
+                        <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold shadow-lg transition-transform duration-300 hover:scale-110">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                    </div>
+                    <div class="flex-grow">
+                        <div class="bg-gradient-to-br from-teal-50 to-white p-6 rounded-xl shadow-md border-l-4 border-primary transition-all duration-300 hover:shadow-xl hover:translate-x-2">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2"><i class="fas fa-file-medical text-accent mr-2"></i>Treatment Planning</h3>
+                            <p class="text-gray-600">
+                                Review test results and create a customized treatment protocol. Our team will explain your options, success rates, costs, and answer all your questions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="flex flex-col md:flex-row gap-6 mb-8" data-aos="fade-right" data-aos-delay="400">
+                    <div class="flex-shrink-0">
+                        <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold shadow-lg transition-transform duration-300 hover:scale-110">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                    </div>
+                    <div class="flex-grow">
+                        <div class="bg-gradient-to-br from-teal-50 to-white p-6 rounded-xl shadow-md border-l-4 border-primary transition-all duration-300 hover:shadow-xl hover:translate-x-2">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2"><i class="fas fa-procedures text-accent mr-2"></i>Treatment Cycle</h3>
+                            <p class="text-gray-600">
+                                Begin your treatment cycle with close monitoring and support. Our team is available throughout the process to adjust protocols and provide guidance.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="flex flex-col md:flex-row gap-6" data-aos="fade-right" data-aos-delay="500">
+                    <div class="flex-shrink-0">
+                        <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold shadow-lg transition-transform duration-300 hover:scale-110">
+                            <i class="fas fa-hands-holding-child"></i>
+                        </div>
+                    </div>
+                    <div class="flex-grow">
+                        <div class="bg-gradient-to-br from-teal-50 to-white p-6 rounded-xl shadow-md border-l-4 border-primary transition-all duration-300 hover:shadow-xl hover:translate-x-2">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2"><i class="fas fa-hand-holding-heart text-accent mr-2"></i>Ongoing Support</h3>
+                            <p class="text-gray-600">
+                                Pregnancy testing, ongoing monitoring, and continued care throughout early pregnancy. We're with you every step of the way to parenthood.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 bg-gradient-to-br from-teal-50 to-white">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <div class="max-w-3xl mx-auto text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Why Choose Malkai IVF Center
+                </h2>
+                <p class="text-lg text-gray-600">
+                    We're committed to providing exceptional care with proven results.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-110 hover:bg-primary group">
+                        <i class="fas fa-certificate text-4xl text-accent group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Accredited Excellence</h3>
+                    <p class="text-gray-600">CAP and CLIA certified laboratory with the highest quality standards</p>
+                </div>
+
+                <div class="text-center" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-110 hover:bg-primary group">
+                        <i class="fas fa-chart-line text-4xl text-accent group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">High Success Rates</h3>
+                    <p class="text-gray-600">Above-average pregnancy rates across all age groups and treatments</p>
+                </div>
+
+                <div class="text-center" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-110 hover:bg-primary group">
+                        <i class="fas fa-dollar-sign text-4xl text-accent group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Transparent Pricing</h3>
+                    <p class="text-gray-600">Clear cost breakdown with flexible payment plans and insurance guidance</p>
+                </div>
+
+                <div class="text-center" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-110 hover:bg-primary group">
+                        <i class="fas fa-heart text-4xl text-accent group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2"><i class="fas fa-hands-holding-heart text-accent mr-2"></i>Compassionate Care</h3>
+                    <p class="text-gray-600">Emotional support, counseling services, and patient-centered approach</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <div class="max-w-3xl mx-auto text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Meet Our Expert Team
+                </h2>
+                <p class="text-lg text-gray-600">
+                   Our dedicated team of fertility specialists, embryologists, and support staff are here to guide you every step of the way.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Team Member 1 - Dr. Ibrar Ahmad -->
+                <div class="bg-gradient-to-br from-teal-50 to-white rounded-2xl overflow-hidden shadow-md hover-lift" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-gradient-to-br from-primary to-secondary p-8">
+                        <div class="w-32 h-32 bg-white rounded-full mx-auto flex items-center justify-center">
+                            <i class="fas fa-user-md text-accent" style="font-size: 5rem;"></i>
+                        </div>
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">Dr. Ibrar Ahmad</h3>
+                        <p class="text-primary font-semibold mb-3">Andrologist, Fertility Specialist & IVF Consultant</p>
+                        <p class="text-sm text-gray-600 mb-4">Specialized in male infertility diagnosis and treatment, fertility consultations, and IVF procedures with personalized care.</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 - Sher Ali Khan -->
+                <div class="bg-gradient-to-br from-teal-50 to-white rounded-2xl overflow-hidden shadow-md hover-lift" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-gradient-to-br from-primary to-secondary p-8">
+                        <div class="w-32 h-32 bg-white rounded-full mx-auto flex items-center justify-center">
+                            <i class="fas fa-microscope text-accent" style="font-size: 4rem;"></i>
+                        </div>
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">Sher Ali Khan</h3>
+                        <p class="text-primary font-semibold mb-3">Lab Director & Embryologist</p>
+                        <p class="text-sm text-gray-600 mb-4">Leading the laboratory operations with expertise in embryo culture, cryopreservation, and ensuring highest standards in embryology.</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 - Faisal Khan -->
+                <div class="bg-gradient-to-br from-teal-50 to-white rounded-2xl overflow-hidden shadow-md hover-lift" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-gradient-to-br from-primary to-secondary p-8">
+                        <div class="w-32 h-32 bg-white rounded-full mx-auto flex items-center justify-center">
+                            <i class="fas fa-flask text-accent" style="font-size: 4rem;"></i>
+                        </div>
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">Faisal Khan</h3>
+                        <p class="text-primary font-semibold mb-3">Lab Technician</p>
+                        <p class="text-sm text-gray-600 mb-4">Supporting laboratory operations with expertise in sample handling, equipment maintenance, and quality control procedures.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <div class="max-w-3xl mx-auto text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    <i class="fas fa-quote-left text-accent mr-3"></i>Success Stories
+                </h2>
+                <p class="text-lg text-gray-600">
+                    Hear from families who achieved their dreams with Malkai IVF Center.
+                </p>
+            </div>
+
+            <div class="owl-carousel owl-theme testimonials-carousel">
+                <!-- Testimonial 1 -->
+                <div class="bg-gradient-to-br from-teal-50 to-white p-8 rounded-2xl shadow-md hover-lift fade-in-scroll">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">
+                        "After years of trying and two failed IVF cycles elsewhere, we found Hope Fertility. Dr. Martinez took the time to understand our unique situation. We're now proud parents of twins!"
+                    </p>
+                    <p class="font-semibold text-gray-900">Sarah & Michael T.</p>
+                    <p class="text-sm text-gray-600">IVF Success - Twin Pregnancy</p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-gradient-to-br from-teal-50 to-white p-8 rounded-2xl shadow-md hover-lift fade-in-scroll">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">
+                        "The egg freezing process was explained clearly and the staff made me feel comfortable every step of the way. I'm so grateful I can focus on my career knowing my fertility is preserved."
+                    </p>
+                    <p class="font-semibold text-gray-900">Jennifer L.</p>
+                    <p class="text-sm text-gray-600">Egg Freezing Patient</p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-gradient-to-br from-teal-50 to-white p-8 rounded-2xl shadow-md hover-lift fade-in-scroll">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">
+                        "As a same-sex couple, we were nervous about finding supportive care. Malkai IVF Center welcomed us with open arms. Our son is now 6 months old and we couldn't be happier!"
+                    </p>
+                    <p class="font-semibold text-gray-900">Amanda & Lisa R.</p>
+                    <p class="text-sm text-gray-600">Donor Sperm IUI Success</p>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="bg-gradient-to-br from-teal-50 to-white p-8 rounded-2xl shadow-md hover-lift fade-in-scroll">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">
+                        "I was 42 and had almost given up hope. The team at Malkai developed a personalized treatment plan and provided emotional support throughout. Our daughter just turned one year old!"
+                    </p>
+                    <p class="font-semibold text-gray-900">Rebecca M.</p>
+                    <p class="text-sm text-gray-600">IVF Success - Single Mom</p>
+                </div>
+
+                <!-- Testimonial 5 -->
+                <div class="bg-gradient-to-br from-teal-50 to-white p-8 rounded-2xl shadow-md hover-lift fade-in-scroll">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">
+                        "The entire process from consultation to procedure was seamless. Dr. Martinez and her team answered all our questions and made us feel confident. We're expecting our baby boy in two months!"
+                    </p>
+                    <p class="font-semibold text-gray-900">David & Maria K.</p>
+                    <p class="text-sm text-gray-600">IVF Success - First Cycle</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <div class="max-w-3xl mx-auto text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Get In Touch
+                </h2>
+                <p class="text-lg text-gray-600">
+                    Have questions? We're here to help. Send us a message or visit our clinic.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+                <!-- Contact Form -->
+                <div class="bg-gradient-to-br from-teal-50 to-white p-8 md:p-10 rounded-2xl shadow-lg hover-lift" data-aos="fade-right" data-aos-duration="1000">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">
+                        <i class="fas fa-paper-plane text-accent mr-2"></i>Send Us a Message
+                    </h3>
+                    <form class="space-y-5">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="contact-name" class="block text-sm font-semibold text-gray-700 mb-2">
+                                    Your Name <span class="text-red-500">*</span>
+                                </label>
+                                <input
+                                    type="text"
+                                    id="contact-name"
+                                    name="name"
+                                    required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition"
+                                    placeholder="John Doe"
+                                >
+                            </div>
+                            <div>
+                                <label for="contact-phone" class="block text-sm font-semibold text-gray-700 mb-2">
+                                    Phone Number <span class="text-red-500">*</span>
+                                </label>
+                                <input
+                                    type="tel"
+                                    id="contact-phone"
+                                    name="phone"
+                                    required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition"
+                                    placeholder="0348 9006365"
+                                >
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="contact-email" class="block text-sm font-semibold text-gray-700 mb-2">
+                                Email Address <span class="text-red-500">*</span>
+                            </label>
+                            <input
+                                type="email"
+                                id="contact-email"
+                                name="email"
+                                required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition"
+                                placeholder="john.doe@email.com"
+                            >
+                        </div>
+
+                        <div>
+                            <label for="contact-subject" class="block text-sm font-semibold text-gray-700 mb-2">
+                                Subject <span class="text-red-500">*</span>
+                            </label>
+                            <select
+                                id="contact-subject"
+                                name="subject"
+                                required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition"
+                            >
+                                <option value="">Select a subject</option>
+                                <option value="consultation">Request Consultation</option>
+                                <option value="appointment">Book Appointment</option>
+                                <option value="information">General Information</option>
+                                <option value="results">Test Results Inquiry</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="contact-message" class="block text-sm font-semibold text-gray-700 mb-2">
+                                Message <span class="text-red-500">*</span>
+                            </label>
+                            <textarea
+                                id="contact-message"
+                                name="message"
+                                required
+                                rows="4"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition resize-none"
+                                placeholder="Tell us how we can help you..."
+                            ></textarea>
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="w-full bg-primary text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-secondary transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+                        >
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="space-y-6" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="bg-gradient-to-br from-primary to-secondary p-8 rounded-2xl shadow-lg text-white">
+                        <h3 class="text-2xl font-bold mb-6">
+                            Contact Information
+                        </h3>
+                        <div class="space-y-6">
+                            <!-- Address -->
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-1">Visit Us</h4>
+                                    <p class="text-white/90">Roshan Specialized Hospital<br>Saidu Sharif, Swat<br>Pakistan</p>
+                                </div>
+                            </div>
+
+                            <!-- Phone -->
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-1">Call Us</h4>
+                                    <p class="text-white/90">0348 9006365</p>
+                                    <p class="text-sm text-white/75 mt-1">Mon-Fri: 8am - 6pm<br>Sat: 9am - 2pm</p>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-1">Email Us</h4>
+                                    <p class="text-white/90">malkaivfcenter@gmail.com</p>
+                                    <p class="text-sm text-white/75 mt-1">Response within 24 hours</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map Placeholder -->
+                    <div class="bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl overflow-hidden shadow-lg hover-lift" style="height: 300px;">
+                        <div class="w-full h-full flex items-center justify-center">
+                            <div class="text-center p-8">
+                                <svg class="w-20 h-20 mx-auto mb-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                <p class="text-lg font-semibold text-gray-700">Our Location</p>
+                                <p class="text-sm text-gray-500 mt-2">Roshan Specialized Hospital<br>Saidu Sharif, Swat, Pakistan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="py-20 bg-gradient-to-br from-primary to-secondary">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <div class="max-w-4xl mx-auto text-center text-white" data-aos="zoom-in" data-aos-duration="1000">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    Ready to Start Your Journey?
+                </h2>
+                <p class="text-xl mb-8 opacity-90">
+                    Schedule your consultation today and take the first step toward building your family. Our compassionate team is here to guide you every step of the way.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="book-appointment.html" class="bg-white text-primary px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105">
+                        Book Consultation
+                    </a>
+                    <a href="contact.html" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-primary transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105">
+                        Contact Us
+                    </a>
+                </div>
+                <p class="mt-6 text-sm opacity-75">
+                    Call us: (555) 123-4567 | Email: info@hopefertility.com
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- About -->
+                <div>
+                    <div class="mb-4">
+                        <a href="index.html">
+                            <img src="image/logo.png" alt="Malka Fertility & IVF Center" class="h-14 brightness-0 invert">
+                        </a>
+                    </div>
+                    <p class="text-sm">
+                        Your trusted partner in building families through advanced fertility care and compassionate support.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-white font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about.html" class="hover:text-primary transition">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-primary transition">Our Services</a></li>
+                        <li><a href="gallery.html" class="hover:text-primary transition">Gallery</a></li>
+                        <li><a href="book-appointment.html" class="hover:text-primary transition">Book Appointment</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h3 class="text-white font-bold mb-4">Services</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="services.html" class="hover:text-primary transition">IVF</a></li>
+                        <li><a href="services.html" class="hover:text-primary transition">ICSI</a></li>
+                        <li><a href="services.html" class="hover:text-primary transition">PGD</a></li>
+                        <li><a href="services.html" class="hover:text-primary transition">FET</a></li>
+                        <li><a href="services.html" class="hover:text-primary transition">IUI</a></li>
+                        <li><a href="services.html" class="hover:text-primary transition">Laparoscopy</a></li>
+                        <li><a href="services.html" class="hover:text-primary transition">Ovulation Induction</a></li>
+                        <li><a href="services.html" class="hover:text-primary transition">PGT</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-white font-bold mb-4">Contact Info</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span>Roshan Specialized Hospital<br>Saidu Sharif, Swat, Pakistan</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                            <span>0348 9006365</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <span>malkaivfcenter@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center mb-6">
+                    <p class="text-sm">&copy; 2026 Malkai IVF Center. All rights reserved.</p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="privacy-policy.html" class="hover:text-primary transition text-sm flex items-center">
+                            <i class="fas fa-shield-alt mr-2"></i>Privacy Policy
+                        </a>
+                        <a href="terms-of-service.html" class="hover:text-primary transition text-sm flex items-center">
+                            <i class="fas fa-file-contract mr-2"></i>Terms of Service
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Social Media Links -->
+                <div class="border-t border-gray-800 pt-6">
+                    <p class="text-sm text-center mb-4">Follow us on social media</p>
+                    <div class="flex justify-center items-center space-x-6">
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/TheMAFC" target="_blank" rel="noopener noreferrer" class="group">
+                            <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-all duration-300 hover:scale-110">
+                                <svg class="w-6 h-6 text-gray-300 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </div>
+                        </a>
+
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/malkaivfcenter" target="_blank" rel="noopener noreferrer" class="group">
+                            <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gradient-to-br hover:from-purple-600 hover:via-pink-600 hover:to-orange-500 transition-all duration-300 hover:scale-110">
+                                <svg class="w-6 h-6 text-gray-300 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </div>
+                        </a>
+
+                        <!-- TikTok -->
+                        <a href="https://www.tiktok.com/@malkaivfcenter" target="_blank" rel="noopener noreferrer" class="group">
+                            <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-black transition-all duration-300 hover:scale-110">
+                                <svg class="w-6 h-6 text-gray-300 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                                </svg>
+                            </div>
+                        </a>
+
+                        <!-- YouTube -->
+                        <a href="https://www.youtube.com/@malkaivfcenter" target="_blank" rel="noopener noreferrer" class="group">
+                            <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 transition-all duration-300 hover:scale-110">
+                                <svg class="w-7 h-7 text-gray-300 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                </svg>
+                            </div>
+                        </a>
+
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/company/malkaivfcenter" target="_blank" rel="noopener noreferrer" class="group">
+                            <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-700 transition-all duration-300 hover:scale-110">
+                                <svg class="w-6 h-6 text-gray-300 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Scroll animation observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with fade-in-scroll class
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.fade-in-scroll').forEach(el => observer.observe(el));
+        });
+    </script>
+
+    <!-- AOS Animation Initialization -->
+    <script>
+        // Initialize Owl Carousel for Testimonials
+        $(document).ready(function(){
+            $('.testimonials-carousel').owlCarousel({
+                loop: true,
+                margin: 30,
+                nav: true,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 2
+                    },
+                    1024: {
+                        items: 3
+                    }
+                },
+                navText: [
+                    '<i class="fas fa-chevron-left"></i>',
+                    '<i class="fas fa-chevron-right"></i>'
+                ]
+            });
+        });
+
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100,
+            delay: 0
+        });
+    </script>
+
+</body>
+</html>
